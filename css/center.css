@@ -1,0 +1,161 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: sans-serif;
+    background: #3867d6;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.navLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navLinks li{
+    padding: 0.2rem 0;
+    list-style: none;
+    list-style: none;
+    margin-left: 2rem;
+}
+.brand{
+    font-size: 1.4rem;
+    color: #d1d8e0;
+    font-weight: 700;
+}
+
+.navLinks li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+
+}
+
+.navLinks li a:hover,.navLinks li.active a{
+    color: rgb(46, 44, 204);
+}
+.btn{
+    padding: 8px 20px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background:rgb(46, 44, 204) ;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn:hover{
+    border-color: white;
+    background: transparent;
+    color: white;
+}
+
+.burger{
+    display: none;
+}
+
+.burger span{
+    width: 28px;
+    height: 2px;
+    background:white;
+    margin-bottom: 7px;
+    transform-origin: left;
+    transition: all 0.3s ease-in-out;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 5rem;
+    text-align: center;
+    color: white;
+   
+}
+
+header h1{
+    font-weight: 100;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+header p{
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+}
+
+footer{
+    position: fixed;
+    bottom: 1rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+footer a{
+    color: white;
+}
+
+@media(max-width:780px){
+    .burger{
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        z-index: 999;
+    }
+    .brand{
+        z-index: 999;
+    }
+    .navLinks{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: space-evenly;
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        background: rgb(224, 224, 224);
+        pointer-events: none;
+    }
+    .navLinks li a{
+        font-size: 18px;
+        font-weight: 700;
+        color: black;
+    }
+    .navLinks.show{
+       opacity: 1;
+       pointer-events: auto;
+    }
+    header{
+        width: 100%;
+    }
+   
+}
